@@ -46,17 +46,20 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Image.network(
-                                  'https://i0.wp.com/kindalame.com/wp-content/uploads/2021/05/metamask-fox-wordmark-horizontal.png?fit=1549%2C480&ssl=1',
-                                  width: 300,
-                                ),
+                                SizedBox(
+                                  width: 200,
+                                  height: 200,
+                                  child: Image(
+                                      image: AssetImage(
+                                          "assets/metamask-logo.png")),
+                                )
                               ],
                             ),
                           ),
                         ],
                       );
                     } else {
-                      text = 'Please use a Web3 supported browser.';
+                      text = 'Your browser is not Web3 supported.';
                     }
 
                     return ShaderMask(
