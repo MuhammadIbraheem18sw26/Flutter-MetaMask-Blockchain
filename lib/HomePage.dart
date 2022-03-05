@@ -17,6 +17,8 @@ class _HomePageState extends State<HomePage> {
       create: (context) => MetaMaskProvider()..init(),
       builder: (context, child) {
         return Scaffold(
+          appBar:
+              AppBar(title: Text("Dapp"), backgroundColor: Colors.amberAccent),
           backgroundColor: const Color(0xEED28B0F),
           body: Stack(
             children: [
